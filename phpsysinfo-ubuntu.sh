@@ -33,7 +33,7 @@ sudo apt update
 sudo apt install php7.0 php7.0-mcrypt php7.0-mysql php7.0-curl php7.0-mbstring libapache2-mod-php7.0 php7.0-common php7.0-xml -y
 
 ## change to port 7071
-sed -i -e 's/Listen 80/Listen 7071/g' /etc/apache2/apache2.conf
+echo "Listen 7071" >> /etc/apache2/apache2.conf
 
 ## install phpsysinfo
 cd /var/www/html
