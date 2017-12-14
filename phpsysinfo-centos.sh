@@ -39,7 +39,7 @@ sed -i -e 's/Listen 80/Listen 7071/g' /etc/httpd/conf/httpd.conf
 sudo /usr/sbin/apachectl restart
 
 ## downloading phpsysinfo
-cd /var/www/html
+cd /var/www
 rm -R *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
