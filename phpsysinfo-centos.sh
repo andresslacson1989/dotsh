@@ -46,5 +46,13 @@ unzip master.zip
 cp -r phpsysinfo-master/* /var/www/html
 mv phpsysinfo.ini.new phpsysinfo.ini
 
+mkdir -p /var/www/html/html
+cd /var/www/html/html
+rm -rf *
+wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
+unzip master.zip
+cp -r phpsysinfo-master/* /var/www/html/html
+mv phpsysinfo.ini.new phpsysinfo.ini
+
 ## finishing installation
 sudo /usr/sbin/apachectl restart
