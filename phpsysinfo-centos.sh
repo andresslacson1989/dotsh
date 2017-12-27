@@ -33,14 +33,14 @@ sudo /sbin/chkconfig --list httpd | grep httpd
 sudo yum install php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml -y
 
 ## change to port 7071
-sed -i -e 's/Listen 80/Listen 7071/g' /etc/httpd/conf/httpd.conf
+sed -i -e 's/Listen 80/Listen 8080/g' /etc/httpd/conf/httpd.conf
 
 ##restarting HTTP Services
 sudo /usr/sbin/apachectl restart
 
 ## downloading phpsysinfo
-cd /var/www
-rm -R *
+cd /var/www/html
+rm -rf *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 cp -r phpsysinfo-master/* /var/www/html
