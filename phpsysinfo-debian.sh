@@ -42,6 +42,7 @@ wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 cp -r phpsysinfo-master/* .
 cp -r phpsysinfo-master/* /var/www
+cp -r phpsysinfo-master/* /var/www/html
 mv phpsysinfo.ini.new phpsysinfo.ini
 
 ## finishing installation
