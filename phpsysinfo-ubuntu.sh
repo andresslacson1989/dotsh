@@ -44,6 +44,7 @@ rm -R *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 cp -r phpsysinfo-master/* /var/www/html
+mkdir html
 cp -r phpsysinfo-master/* /var/www/html/html
 mv phpsysinfo.ini.new phpsysinfo.ini
 cd html
