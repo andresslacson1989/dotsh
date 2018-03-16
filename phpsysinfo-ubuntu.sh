@@ -5,6 +5,9 @@
 #              Don't use port 7071              #     
 #################################################
 
+# install sudo 
+apt install sudo
+
 ## updating system
 sudo apt update -y
 
@@ -41,6 +44,9 @@ rm -R *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 cp -r phpsysinfo-master/* /var/www/html
+cp -r phpsysinfo-master/* /var/www/html/html
+mv phpsysinfo.ini.new phpsysinfo.ini
+cd html
 mv phpsysinfo.ini.new phpsysinfo.ini
 
 ## restart
