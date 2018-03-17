@@ -2,7 +2,7 @@
 
 #################################################
 #     Server Configuration for Debian Final     #
-#              Don't use port 7071              #     
+#              Don't use port 8080              #     
 #################################################
 
 ## install sudo
@@ -27,7 +27,7 @@ sudo service apache2 start
 echo "ServerName	localhost" >> /etc/apache2/apache2.conf
 
 ## install PHP5
-sudo apt-get install php5 php5-common libapache2-mod-php php-xml -y
+sudo apt-get install php5 php5-common php5-xml libapache2-mod-php5 libapache2-mod-php php-xml -y
 
 ## change to port 7071
 echo "Listen	8080" >> /etc/apache2/apache2.conf
@@ -38,11 +38,12 @@ sudo service apache2 restart
 ## downloading phpsysinfo
 cd /var/www
 rm -R *
+mkdir html
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 mv phpsysinfo-master/phpsysinfo.ini.new phpsysinfo-master/phpsysinfo.ini
 cp -r phpsysinfo-master/* .
-cp -r phpsysinfo-master/* /var/www/html
+cp -r phpsysinfo-master/* html
 
 
 ## finishing installation
