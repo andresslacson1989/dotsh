@@ -27,7 +27,7 @@ sudo service apache2 start
 echo "ServerName	localhost" >> /etc/apache2/apache2.conf
 
 ## install PHP5
-sudo apt-get install php5 php5-common libapache2-mod-php5 -y
+sudo apt-get install php5 php5-common libapache2-mod-php php-xml -y
 
 ## change to port 7071
 echo "Listen	8080" >> /etc/apache2/apache2.conf
