@@ -36,13 +36,12 @@ echo "Listen	8080" >> /etc/apache2/apache2.conf
 sudo service apache2 restart
 
 ## downloading phpsysinfo
-cd /var/www/html
+cd /var/www
 rm -R *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
 mv phpsysinfo-master/phpsysinfo.ini.new phpsysinfo-master/phpsysinfo.ini
 cp -r phpsysinfo-master/* .
-cp -r phpsysinfo-master/* /var/www
 cp -r phpsysinfo-master/* /var/www/html
 
 
