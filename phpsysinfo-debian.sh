@@ -40,10 +40,11 @@ cd /var/www/html
 rm -R *
 wget https://github.com/phpsysinfo/phpsysinfo/archive/master.zip
 unzip master.zip
+mv phpsysinfo-master/phpsysinfo.ini.new phpsysinfo-master/phpsysinfo.ini
 cp -r phpsysinfo-master/* .
 cp -r phpsysinfo-master/* /var/www
 cp -r phpsysinfo-master/* /var/www/html
-mv phpsysinfo.ini.new phpsysinfo.ini
+
 
 ## finishing installation
 sudo service apache2 restart
