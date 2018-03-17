@@ -10,6 +10,7 @@ apt-get install sudo
 
 ## updating packages
 sudo apt-get update -y
+sudo apt-get upgrade -y
 
 ## installing dependencies
 sudo apt-get install unzip -y
